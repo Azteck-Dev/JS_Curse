@@ -12,6 +12,15 @@ const persona = {
 // console.log(persona.son[3]);
 // console.log(persona.son[4]);
 
-for( key in persona){
-    console.log(persona[key])
-}
+// for( key in persona){
+//     console.log(persona[key])
+// }
+
+// La forma de recorrer el array en un objeto es de la siguiente manera
+
+// for(const son of persona.son){
+//     console.log(son);
+// }
+
+
+console.log(`Hola ${persona.name} tienes ${persona.age} años, y tus hijos se llaman ${persona.son.join(', ')} `)
