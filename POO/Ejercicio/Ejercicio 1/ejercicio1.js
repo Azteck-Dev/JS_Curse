@@ -29,3 +29,5 @@ class book{
         return this.author;
     }
 }
+
+let books = [];
