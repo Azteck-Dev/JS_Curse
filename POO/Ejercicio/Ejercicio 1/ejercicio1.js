@@ -27,13 +27,13 @@ class Libros{
     }
     // Retornar informacion de los autores disponibles
     getAutor(){
-        return this.autor;
+        return `${this.autor}`;
     }
 }
 
 let libro = [];
 
-while(books.length < 1) {
+while(libro.length < 1) {
     let tittle = prompt('Introduce el titulo del libro:');
     let autor = prompt('Introduce el escritor del libro:');
     let year = prompt('Introduce el año depublicacion del libro:');
@@ -50,7 +50,6 @@ while(books.length < 1) {
             libro.push(new Libros(tittle, autor, year, genero));
     }
 }
-
 
 const showBooks = () =>{
     console.log(libro);
