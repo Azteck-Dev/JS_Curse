@@ -12,7 +12,7 @@ Crea una funcion que muestre los autores ordenados alfabeticamente.
 Crear una funcion que pida genero y muestre la informacion de los libros que pertenezcan a ese genero usando el metodo que devuelca la informacion.
 */ 
 
-class book{
+class Book{
 
     constructor(tittle, author, year, gener){
         this.tittle = tittle;
@@ -31,3 +31,24 @@ class book{
 }
 
 let books = [];
+
+while(books.length < 1){
+    let titulo = prompt('Ingresa el titulo del libro:').toLowerCase();
+    let autor = prompt('Ingresa el autor del libro:').toLowerCase();
+    let salio = prompt('Ingresa el año de publicación del libro:');
+    let genero = prompt('Ingresa el genero al que pertenece:').toLowerCase();
+
+    if( titulo != '' &&
+        autor != '' &&
+        !isNaN(salio) &&
+        salio.length == 4 &&
+        (genero == 'terror' || genero == 'fantasia' || genero == 'aventura')) {
+            books.push(new Book(titulo, autor, salio, genero));
+        }
+}
+
+const showAllbooks = () =>{
+    console.log(books);
+}
+
+showAllbooks();
