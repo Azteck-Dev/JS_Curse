@@ -35,8 +35,9 @@ class Book {
 }
 
 let books = [];
+let cant = parseInt(prompt('Cuantos libros deseas registrar?'));
 
-while (books.length < 2) {
+while (books.length < cant) {
     let titulo = prompt('Ingresa el titulo del libro:').toLowerCase();
     let autor = prompt('Ingresa el autor del libro:').toLowerCase();
     let salio = prompt('Ingresa el año de publicación del libro:');
@@ -47,7 +48,7 @@ while (books.length < 2) {
         !isNaN(salio) &&
         salio.length == 4 &&
         (genero == 'terror' || genero == 'fantasia' || genero == 'aventura')) {
-        books.push(new Book(titulo, autor, salio, genero));
+            books.push(new Book(titulo, autor, salio, genero));
     }
 }
 
@@ -67,7 +68,7 @@ const showAllauthors = () => {
     console.log(autores.sort());
 }
 
-// Muestra las categorias disponibles.
+// Busqueda por las categorias disponibles.
 const showGenero = () => {
     const genero = prompt('Introduce el genero que desea buscar: ');
 
@@ -80,3 +81,4 @@ const showGenero = () => {
 
 showAllbooks();
 showAllauthors();
+showGenero();
