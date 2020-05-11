@@ -18,7 +18,7 @@ let booleanos = [true, false, true, false];
 console.log(numeros);
 
 /*
- array por indice, al indicar un indice el resto del array queda invalido ademas que si utilizamos lo siguiente console.log(numeros[0] + numeros[2]) a el valor contenido en los indices seria tomado como una operacionaritmetica 
+array por indice, al indicar un indice el resto del array queda invalido ademas que si utilizamos lo siguiente console.log(numeros[0] + numeros[2]) a el valor contenido en los indices seria tomado como una operacionaritmetica 
 */
 console.log(numeros[1] + numeros[2]);
 
